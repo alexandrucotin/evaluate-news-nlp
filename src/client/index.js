@@ -1,7 +1,12 @@
 //JS
-import { alert } from "./js/alert";
+import { checkForUrl } from './js/urlChecker'
+import { handleSubmit } from './js/formHandler'
 
 //SCSS
 import "./style/main.scss";
 
-export { alert };
+export {
+    checkForUrl,
+    handleSubmit
+}
+

@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Evaluate news nlp</title>
-</head>
-<body>
-    <h1>THIS IS THE AYLIEN API</h1>
-</body>
+  </head>
+  <body>
+    <div class="header-container">
+      <h1 class="header">Use the aylien api</h1>
+      <p class="header-description">
+        The AYLIEN Text Analysis API is a package of Natural Language Processing
+        and Machine Learning-powered APIs for analyzing and extracting various
+        kinds of information from textual content.
+      </p>
+    </div>
+    <div class="form-container">
+      <h2 class="form-header">Insert the url you want to scan!</h2>
+      <form>
+        <div class="form-group">
+          <label class="label" for="">url</label>
+          <input id="url" type="text" name="input" />
+        </div>
+
+        <input
+          class="button"
+          type="submit"
+          value="submit"
+          onclick="return client.handleSubmit(event)"
+        />
+        <p id="checker"></p>
+      </form>
+    </div>
+    <div class="response-container">
+      <h4>This is your response</h4>
+      <div class='response-description'>
+          <p id="polarity"></p>
+          <p id="subjectivity"></p>
+          <p id="polarity-conf"></p>
+          <p id="subjectivity-conf"></p>
+      </div>
+    </div>
+  </body>
 </html>
