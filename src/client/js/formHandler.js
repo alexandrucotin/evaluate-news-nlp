@@ -1,9 +1,8 @@
-function handleSubmit(event) {
-  event.preventDefault();
-
+function handleSubmit(e) {
+  e.preventDefault();
   let scanUrl = document.getElementById("url").value;
   if (client.checkForUrl(scanUrl)) {
-    const postUrl = async (url = "", data = {}) => {
+    const sendUrl = async (url = "", data = {}) => {
       const response = await fetch(url, {
         method: "POST",
         credentials: "same-origin",
@@ -27,9 +26,7 @@ function handleSubmit(event) {
         console.log("error", error);
       }
     };
-
-    postUrl("/data", { url: scanUrl });
+    sendUrl("/data", { url: scanUrl });
   }
 }
-
 export { handleSubmit };

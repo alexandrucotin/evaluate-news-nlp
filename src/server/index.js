@@ -40,7 +40,6 @@ app.post("/data", function (req, res) {
     },
     function (error, response) {
       if (error === null) {
-        // console.log("this is the response.polarity: ", response.polarity);
         projectData = response;
       }
     }

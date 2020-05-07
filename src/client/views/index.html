@@ -25,23 +25,24 @@
           <label class="label" for="">url</label>
           <input id="url" type="text" name="input" />
         </div>
-
         <input
-          class="button"
           type="submit"
+          class="button"
           value="submit"
           onclick="return client.handleSubmit(event)"
+          onsubmit="return client.handleSubmit(event)"
         />
+
         <p id="checker"></p>
       </form>
     </div>
     <div class="response-container">
       <h4>This is your response</h4>
-      <div class='response-description'>
-          <p id="polarity"></p>
-          <p id="subjectivity"></p>
-          <p id="polarity-conf"></p>
-          <p id="subjectivity-conf"></p>
+      <div class="response-description">
+        <p id="polarity"></p>
+        <p id="subjectivity"></p>
+        <p id="polarity-conf"></p>
+        <p id="subjectivity-conf"></p>
       </div>
     </div>
   </body>
