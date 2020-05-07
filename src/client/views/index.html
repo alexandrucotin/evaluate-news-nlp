@@ -29,20 +29,30 @@
           type="submit"
           class="button"
           value="submit"
-          onclick="return client.handleSubmit(event)"
-          onsubmit="return client.handleSubmit(event)"
+          onclick="return Client.handleSubmit(event)"
+          onsubmit="return Client.handleSubmit(event)"
         />
 
         <p id="checker"></p>
       </form>
     </div>
     <div class="response-container">
-      <h4>This is your response</h4>
+      <h2 class="response-header">This is your response</h2>
       <div class="response-description">
-        <p id="polarity"></p>
-        <p id="subjectivity"></p>
-        <p id="polarity-conf"></p>
-        <p id="subjectivity-conf"></p>
+        <table class="table">
+          <tr>
+            <th>Polarity</th>
+            <th>Subjectivity</th>
+            <th>Polarity confidence</th>
+            <th>Subjectivity confidence</th>
+          </tr>
+          <tr>
+            <td id="polarity"></td>
+            <td id="subjectivity"></td>
+            <td id="polarity-conf"></td>
+            <td id="subjectivity-conf"></td>
+          </tr>
+        </table>
       </div>
     </div>
   </body>

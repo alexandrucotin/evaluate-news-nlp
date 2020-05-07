@@ -17,7 +17,6 @@ var textapi = new AYLIENTextAPI({
 
 const app = express();
 
-
 //middlewares
 app.use(express.static("dist"));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -40,12 +39,12 @@ app.post("/data", function (req, res) {
     },
     function (error, response) {
       if (error === null) {
+        console.log("this is the response", response);
         projectData = response;
+        res.send(projectData);
       }
     }
   );
-  console.log("this is the projectData after the api call: ", projectData);
-  res.send(projectData);
 });
 
 //running server

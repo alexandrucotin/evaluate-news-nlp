@@ -1,0 +1,25 @@
+.response-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .response-header {
+    padding: 1rem;
+  }
+
+  .response-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .table {
+      td,
+      th {
+        text-align: center;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
